@@ -4634,6 +4634,14 @@ func (l *Log) GetLogID() string {
 	return *l.LogID
 }
 
+// GetOrganizationID returns the OrganizationID field if it's non-nil, zero value otherwise.
+func (l *Log) GetOrganizationID() string {
+	if l == nil || l.OrganizationID == nil {
+		return ""
+	}
+	return *l.OrganizationID
+}
+
 // GetType returns the Type field if it's non-nil, zero value otherwise.
 func (l *Log) GetType() string {
 	if l == nil || l.Type == nil {
@@ -4648,6 +4656,14 @@ func (l *Log) GetUserID() string {
 		return ""
 	}
 	return *l.UserID
+}
+
+// GetUserName returns the UserName field if it's non-nil, zero value otherwise.
+func (l *Log) GetUserName() string {
+	if l == nil || l.UserName == nil {
+		return ""
+	}
+	return *l.UserName
 }
 
 // String returns a string representation of Log.

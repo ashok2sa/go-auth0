@@ -89,6 +89,12 @@ type Log struct {
 
 	// The user's unique identifier
 	UserID *string `json:"user_id"`
+
+	// The user's name
+	UserName *string `json:"user_name"`
+
+	// Organization Id
+	OrganizationID *string `json:"organization_id"`
 }
 
 // TypeName returns the type name of an Event Log.

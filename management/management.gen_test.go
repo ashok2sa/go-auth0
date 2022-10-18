@@ -5862,6 +5862,16 @@ func TestLog_GetLogID(tt *testing.T) {
 	l.GetLogID()
 }
 
+func TestLog_GetOrganizationID(tt *testing.T) {
+	var zeroValue string
+	l := &Log{OrganizationID: &zeroValue}
+	l.GetOrganizationID()
+	l = &Log{}
+	l.GetOrganizationID()
+	l = nil
+	l.GetOrganizationID()
+}
+
 func TestLog_GetType(tt *testing.T) {
 	var zeroValue string
 	l := &Log{Type: &zeroValue}
@@ -5880,6 +5890,16 @@ func TestLog_GetUserID(tt *testing.T) {
 	l.GetUserID()
 	l = nil
 	l.GetUserID()
+}
+
+func TestLog_GetUserName(tt *testing.T) {
+	var zeroValue string
+	l := &Log{UserName: &zeroValue}
+	l.GetUserName()
+	l = &Log{}
+	l.GetUserName()
+	l = nil
+	l.GetUserName()
 }
 
 func TestLog_String(t *testing.T) {
